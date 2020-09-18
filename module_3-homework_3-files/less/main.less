@@ -42,9 +42,6 @@ h1 {
   height: 400px;
   display: flex;
   flex-direction: column;
-  img, button {
-    align-self: center;
-  }
   img {
     padding: 10px;
     max-width: 400px;
@@ -60,4 +57,39 @@ h1 {
 
 section button {
   .btn-primary();
+}
+
+// content sections
+
+section {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 100px;
+  img, button {
+    align-self: center;
+  }
+  h2 {
+    .heading-text();
+  }
+}
+
+.best-burgers {
+  background-color: white;
+  flex-direction: row-reverse;
+  img {
+    padding: 0 100px;
+  }
+}
+
+.dine-options {
+  background-color: @offwhite;
+  img {
+    padding: 0 100px;
+  }
+}
+
+.red-header {
+  color: @red;
 }
