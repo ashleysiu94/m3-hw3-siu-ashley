@@ -22,7 +22,42 @@ header {
 
       li {
         padding: 0 25px;
+        .nav-item();
+      }
+
+      .order {
+        color: @red;
       }
     }
   }
+}
+
+// jumbotron
+
+h1 {
+  display: none;
+}
+
+.jumbotron {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  img, button {
+    align-self: center;
+  }
+  img {
+    padding: 10px;
+    max-width: 400px;
+  }
+}
+
+.hero {
+  background-image: linear-gradient(to bottom, rgba(59,	56,	56, 0.33), rgba(59,	56,	56, 0.33)), url("../img/banner-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+section button {
+  .btn-primary();
 }
