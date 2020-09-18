@@ -2,6 +2,7 @@
 
 body {
   font-family: @primary-font;
+  font-weight: 400;
 }
 
 // header
@@ -72,6 +73,9 @@ section {
   }
   h2 {
     .heading-text();
+    .red-header {
+      color: @red;
+    }
   }
 }
 
@@ -90,6 +94,16 @@ section {
   }
 }
 
-.red-header {
-  color: @red;
+// footer
+
+footer {
+  background-color: @black;
+  border-top: 10px solid @yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    max-width: 350px;
+    padding: 25px;
+  }
 }

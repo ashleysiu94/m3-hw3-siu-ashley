@@ -36,6 +36,7 @@
 }
 body {
   font-family: 'Roboto', sans-serif;
+  font-weight: 400;
 }
 header {
   background-color: #f8df1f;
@@ -128,6 +129,9 @@ section h2 {
   color: #050500;
   font-weight: 500;
 }
+section h2 .red-header {
+  color: #ee252f;
+}
 .best-burgers {
   background-color: white;
   -webkit-box-orient: horizontal;
@@ -144,6 +148,20 @@ section h2 {
 .dine-options img {
   padding: 0 100px;
 }
-.red-header {
-  color: #ee252f;
+footer {
+  background-color: #080801;
+  border-top: 10px solid #f8df1f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer img {
+  max-width: 350px;
+  padding: 25px;
 }
