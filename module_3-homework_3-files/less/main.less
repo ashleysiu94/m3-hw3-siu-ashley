@@ -1,0 +1,28 @@
+@import 'mixins';
+
+body {
+  font-family: @primary-font;
+}
+
+// header
+
+header {
+  background-color: @yellow;
+  height: 100px;
+  display:flex;
+  align-items: center;
+
+  nav {
+    margin-left: 50px;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+
+      li {
+        padding: 0 25px;
+      }
+    }
+  }
+}
