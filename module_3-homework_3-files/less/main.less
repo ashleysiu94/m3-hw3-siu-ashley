@@ -12,17 +12,17 @@ header {
   height: 100px;
   display:flex;
   align-items: center;
+  justify-content: center;
 
   nav {
-    margin-left: 50px;
-
     ul {
       display: flex;
       flex-direction: row;
+      justify-content: center;
       list-style-type: none;
 
       li {
-        padding: 0 25px;
+        padding: 0 10px;
         .nav-item();
       }
 
@@ -32,6 +32,22 @@ header {
     }
   }
 }
+
+@media screen and (min-width: 650px) {
+  header {
+    justify-content: flex-start;
+    nav {
+      margin-left: 50px;
+      ul {
+        justify-content: flex-start;
+        li{
+          padding: 0 25px;
+        }
+      }
+    }
+  }
+}
+
 
 // jumbotron
 
@@ -45,7 +61,14 @@ h1 {
   flex-direction: column;
   img {
     padding: 10px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 450px) {
+    img {
     max-width: 400px;
+    }
   }
 }
 
@@ -56,21 +79,22 @@ h1 {
   background-size: cover;
 }
 
-section button {
-  .btn-primary();
-}
-
 // content sections
 
 section {
-  height: 400px;
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 25px 100px;
+  padding: 25px 50px;
   img, button {
     align-self: center;
   }
+
+  button {
+    .btn-primary();
+  }
+
   h2 {
     .heading-text();
     .red-header {
@@ -79,18 +103,39 @@ section {
   }
 }
 
+@media screen and (min-width: 500px) {
+  section {
+    padding: 25px 100px;
+  }
+}
+
 .best-burgers {
   background-color: white;
-  flex-direction: row-reverse;
+  flex-direction: column-reverse;
   img {
-    padding: 0 100px;
+    padding: 25px 0;
+  }
+
+  @media screen and (min-width: 900px) {
+    flex-direction: row-reverse;
+    img {
+      padding: 0 100px;
+    }
   }
 }
 
 .dine-options {
   background-color: @offwhite;
+  flex-direction: column-reverse;
   img {
-    padding: 0 100px;
+    padding: 25px 0;
+  }
+
+  @media screen and (min-width: 900px) {
+    flex-direction: row;
+    img {
+      padding: 0 100px;
+    }
   }
 }
 

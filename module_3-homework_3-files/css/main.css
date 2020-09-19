@@ -47,9 +47,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-header nav {
-  margin-left: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 header nav ul {
   display: -webkit-box;
@@ -59,10 +59,13 @@ header nav ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   list-style-type: none;
 }
 header nav ul li {
-  padding: 0 25px;
+  padding: 0 10px;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   color: #050500;
@@ -70,6 +73,24 @@ header nav ul li {
 }
 header nav ul .order {
   color: #ee252f;
+}
+@media screen and (min-width: 650px) {
+  header {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  header nav {
+    margin-left: 50px;
+  }
+  header nav ul {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  header nav ul li {
+    padding: 0 25px;
+  }
 }
 h1 {
   display: none;
@@ -86,7 +107,13 @@ h1 {
 }
 .jumbotron img {
   padding: 10px;
-  max-width: 400px;
+  width: 90%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 450px) {
+  .jumbotron img {
+    max-width: 400px;
+  }
 }
 .hero {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(59, 56, 56, 0.33)), to(rgba(59, 56, 56, 0.33))), url("../img/banner-bg.png");
@@ -94,6 +121,24 @@ h1 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+section {
+  min-height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 25px 50px;
+}
+section img,
+section button {
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 section button {
   font-family: 'Roboto', sans-serif;
@@ -105,24 +150,6 @@ section button {
   border: none;
   padding: 15px 40px;
 }
-section {
-  height: 400px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 25px 100px;
-}
-section img,
-section button {
-  -ms-flex-item-align: center;
-      align-self: center;
-}
 section h2 {
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
@@ -132,21 +159,52 @@ section h2 {
 section h2 .red-header {
   color: #ee252f;
 }
+@media screen and (min-width: 500px) {
+  section {
+    padding: 25px 100px;
+  }
+}
 .best-burgers {
   background-color: white;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 .best-burgers img {
-  padding: 0 100px;
+  padding: 25px 0;
+}
+@media screen and (min-width: 900px) {
+  .best-burgers {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .best-burgers img {
+    padding: 0 100px;
+  }
 }
 .dine-options {
   background-color: #f3f3f3;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 .dine-options img {
-  padding: 0 100px;
+  padding: 25px 0;
+}
+@media screen and (min-width: 900px) {
+  .dine-options {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .dine-options img {
+    padding: 0 100px;
+  }
 }
 footer {
   background-color: #080801;
